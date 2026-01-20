@@ -1,0 +1,10 @@
+<h1>Rellenar tarea</h1>
+
+<div>
+    <form (ngSubmit)="crearTarea()">
+        <label for="titulo"></label>
+        <input type="text" name="titulo" [(ngModel)]="tareaNueva.title">
+
+        <button type="submit">Crear</button>
+    </form>
+</div>

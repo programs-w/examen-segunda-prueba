@@ -1,0 +1,9 @@
+#navegador a {
+    text-decoration: none;
+    color: black;
+}
+#navegador{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

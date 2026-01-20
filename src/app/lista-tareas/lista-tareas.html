@@ -1,0 +1,33 @@
+<h1>Lista de tareas</h1>
+
+<ul>
+    <li *ngFor="let tarea of tareas"> IDuser: {{tarea.userId}} - IDtarea: {{tarea.id}} - Titulo: {{tarea.title}} - Completada {{ tarea.completed ? '✅ Completada' : '⏳ Pendiente' }} </li>
+</ul>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>IDuser</th>
+            <th>IDtarea</th>
+            <th>Titulo</th>
+            <th>Completada</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let tarea of tareas">
+            <td>{{tarea.userId}} </td>
+            <td>{{tarea.id}}</td>
+            <td>{{tarea.title}}</td>
+            <td>{{tarea.completed ?'Completada' :'No completada'}}</td>
+            <td>
+                <button>
+                    <a [routerLink]="['/editar-tarea', tarea.id]">Ver</a>
+                </button>
+                <button (click)="borrarTarea(tarea.id)">Eliminar</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

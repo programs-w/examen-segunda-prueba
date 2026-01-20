@@ -1,0 +1,16 @@
+<h1>Detalles de la tarea</h1>
+<div *ngIf="tareaEditando">
+<form action="">
+    <label for="tareaId">Tarea ID</label>
+    <input type="text" name="tareaId" [(ngModel)]="tareaEditando.id">
+    <br>
+    <label for="titulo">Título</label>
+    <input type="text" name="titulo" [(ngModel)]="tareaEditando.title">
+    <br>
+   
+    
+    <br>
+    <button (click)="actualizarTarea(tareaEditando.id, tareaEditando)">Actualizar</button>
+    <button (click)="cancelar()">Cancelar</button>
+</form>
+</div>
